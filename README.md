@@ -21,7 +21,7 @@ If you have any questions or feedback, please reach out to us at ashutosh.220106
 
 ### Setup
 
-To set up **code-a-licious** on your local machine, follow these steps:
+To set up **Weather_Forecast App** on your local machine, follow these steps:
 
 
 
@@ -31,7 +31,7 @@ To set up **code-a-licious** on your local machine, follow these steps:
 2. Clone the forked repository:
 
 ```bash
-git clone https://github.com/<yourusername>/todoapp.git
+git clone https://github.com/<yourusername>/Weather_Forecast-App.git
 ```
 
 3. Navigate to the project directory:
