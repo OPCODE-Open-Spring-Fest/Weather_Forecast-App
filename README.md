@@ -9,7 +9,7 @@ Weather forecast application provides real-time updates through OpenWeather API,
 
 * Flutter
 * Open WeatherAPI
-* Location Pligin
+* Location Plugin
 
 
 
@@ -17,7 +17,7 @@ Weather forecast application provides real-time updates through OpenWeather API,
 
 If you have any questions or feedback, please reach out to us at ashutosh.2201062cs@iiitbh.ac.in. 📧
 
-
+#
 
 ### Setup
 
