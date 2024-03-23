@@ -10,7 +10,7 @@ If you are new to Weather_Forecast-App, please take a look at the [documentation
 
 ## New Contributor Guide
 
-To get an overview of the codebase, check out the '[README.md](/README.md)' file in the `src` directory.
+To get an overview of the codebase, check out the '[README.md](/README.md)' file.
 
 that will help you understand the structure of the project.
 
@@ -28,6 +28,6 @@ If you want to suggest an enhancement to Weather_Forecast-App, please [submit an
 
 If you want to contribute to Weather_Forecast-App, submit a pull request.
 
-- url: `https://github.com/OPCODE-Open-Spring-Fest/weather_forecast-App/compare/branch...YOURGITHUBUSERNAME:weather_forecast-App:BRANCH?quick_pull=1&template=pr.md`
+- url: `https://github.com/OPCODE-Open-Spring-Fest/weather_forecast-app/compare/branch...YOURGITHUBUSERNAME:weather_forecast-app:BRANCH?quick_pull=1&template=pr.md`
   
 
