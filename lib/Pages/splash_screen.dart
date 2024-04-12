@@ -9,7 +9,7 @@ import 'package:location/location.dart';
 Location location = new Location();
 bool _serviceEnabled = false;
 PermissionStatus? _permissionGranted;
-
+//sdfgfgf
 Future<dynamic> getLoc() async {
   _serviceEnabled = await location.serviceEnabled();
   if (!_serviceEnabled) {
@@ -42,15 +42,11 @@ class _SplashScreenState extends State<SplashScreen> {
     Weather w;
 
     LocationData _loc = await getLoc();
-   
+
     try {
-      
-               w = await widget.wf
-          .currentWeatherByLocation(_loc.latitude!,_loc.longitude!
-              
-              );
-     
-     
+      w = await widget.wf
+          .currentWeatherByLocation(_loc.latitude!, _loc.longitude!);
+
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -90,7 +86,6 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Container(
         child: Center(child: Lottie.asset("assets/aniamtion/11.json")),
-     
       ),
     );
   }
