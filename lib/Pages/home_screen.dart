@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter/widgets.dart';
 import 'package:weather/weather.dart';
 import 'package:weather_app/Pages/splash_screen.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -25,6 +26,32 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   RefreshController _refreshController =
       RefreshController(initialRefresh: false);
+
+  String? wallpaper;
+  String getwallpaper(String des) {
+    if (des == "clear sky") {
+      return "assets/wallpaper/clear_sky.jpg";
+    } else if (des == "few clouds") {
+      return "assets/wallpaper/few_clouds.png";
+    } else if (des == "scattered clouds") {
+      return "assets/wallpaper/scattered_clouds.jpg";
+    } else if (des == "broken clouds") {
+      return "assets/wallpaper/broken_clouds.jpg";
+    } else if (des == "shower rain") {
+      return "assets/wallpaper/shower_rain.jpg";
+    } else if (des == "rain") {
+      return "assets/wallpaper/rain.jpg";
+    } else if (des == "thunderstrom") {
+      return "assets/wallpaper/thunderstrom.jpg";
+    } else if (des == "snow") {
+      return "assets/wallpaper/snow.jpg";
+    } else if (des == "mist" || des == "haze") {
+      return "assets/wallpaper/mist.jpg";
+    } else {
+      return "assets/wallpaper/clear_sky.jpg";
+    }
+  }
+
   String? weathericon;
   String geticon(String des) {
     if (des == "clear sky") {
@@ -59,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
               builder: (context) => MyHomePage(
                     w: w,
                     location: location,
-                    wf: widget.wf,  
+                    wf: widget.wf,
                   )));
     } on OpenWeatherAPIException catch (ex) {
       return showDialog(
@@ -89,15 +116,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Container(
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topRight,
-            end: Alignment.bottomLeft,
-            colors: [
-              Colors.lightBlue.shade400,
-              Colors.purple.shade400,
-            ],
+            image: DecorationImage(
+          image: AssetImage(
+            getwallpaper(widget.w.weatherDescription.toString()),
           ),
-        ),
+          fit: BoxFit.cover,
+        )),
         child: Column(
           children: [
             Padding(
@@ -136,8 +160,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       height: 100,
                       decoration: BoxDecoration(
                           image: DecorationImage(
-                              image: AssetImage(geticon(
-                                  widget.w.weatherDescription.toString())))),
+                        image: AssetImage(
+                            geticon(widget.w.weatherDescription.toString())),
+                      )),
                     ),
                     Center(
                       child: Container(
